@@ -220,7 +220,7 @@ public class PodSetController {
                   .addNewOwnerReference().withController(true).withKind("PodSet").withApiVersion("demo.k8s.io/v1alpha1").withName(podSet.getMetadata().getName()).withUid(podSet.getMetadata().getUid()).endOwnerReference()
                 .endMetadata()
                 .withNewSpec()
-                  .addNewContainer().withName("busybox").withImage("busybox").withCommand("sleep", "3600").endContainer()
+                  .addNewContainer().withName("tpn").withImage("quay.io/yewande_toriola_ibm/ibm_tpn").endContainer()
                 .endSpec()
                 .build();
     }
